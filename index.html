@@ -16,7 +16,7 @@
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="script.js?v=6" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenu">Skip to content</a>
@@ -86,84 +86,169 @@
             <h2 id="projects-title">Selected projects<span class="hero-period">.</span></h2>
           </div>
           <p class="section-intro">
-            Projects from my Computer Science degree and personal work.
+            Projects from my Computer Science degree and personal work. Select a card to view its details.
           </p>
         </div>
 
         <template id="project-card-template">
           <article class="project-card">
-            <div class="project-card-top">
-              <span class="project-type">UNIVERSITY PROJECT</span>
+            <button class="project-card-open" type="button" aria-label="View project details" aria-haspopup="dialog"></button>
+            <div class="project-details">
+              <div class="project-summary">
+                <span class="project-card-top">
+                  <span class="project-type">UNIVERSITY PROJECT</span>
+                </span>
+                <h3 class="project-title">Project name</h3>
+                <span class="project-description">Describe the project, its goals and your contribution.</span>
+                <span class="project-tags" role="list" aria-label="Technologies used">
+                  <span role="listitem">Technology</span>
+                  <span role="listitem">Technology</span>
+                </span>
+              </div>
+              <div class="project-expanded">
+                <p>Add more information about your approach, your contribution, and what you learned.</p>
+              </div>
             </div>
-            <h3>Project name</h3>
-            <p class="project-description">Describe the project, its goals and your contribution.</p>
-            <ul class="project-tags" aria-label="Technologies used">
-              <li>Technology</li>
-              <li>Technology</li>
-            </ul>
             <div class="project-links">
-              <a href="https://github.com/" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-              <a href="https://example.com/" target="_blank" rel="noreferrer">Live demo <span aria-hidden="true">↗</span></a>
+              <a class="repository-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="View source (opens in a new tab)">
+                View source
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 3h7v7"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
+              <a class="demo-link" href="https://example.com/" target="_blank" rel="noopener noreferrer" aria-label="Live demo (opens in a new tab)">
+                Live demo
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 3h7v7"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
             </div>
           </article>
         </template>
         <div class="project-grid" id="project-list">
           <article class="project-card">
-            <div class="project-card-top">
-              <span class="project-type">2D GAME</span>
+            <button class="project-card-open" type="button" aria-label="View details for 2D Game in C++" aria-haspopup="dialog"></button>
+            <div class="project-details">
+              <div class="project-summary">
+                <span class="project-card-top"><span class="project-type">2D GAME</span></span>
+                <h3 class="project-title">2D Game in C++</h3>
+                <span class="project-description">A 2D game prototype using SDL, with characters and sprites.</span>
+                <span class="project-tags" role="list" aria-label="Technologies used">
+                  <span role="listitem">C++</span><span role="listitem">SDL</span>
+                </span>
+              </div>
+              <div class="project-expanded">
+                <p>The C++/SDL prototype includes a game loop, sprite rendering, and player and enemy characters. Directional input changes the player character’s facing direction.</p>
+              </div>
             </div>
-            <h3>2D Game in C++</h3>
-            <p class="project-description">A 2D game prototype using SDL, with characters and sprites.</p>
-            <ul class="project-tags" aria-label="Technologies used">
-              <li>C++</li><li>SDL</li>
-            </ul>
             <div class="project-links">
-              <a href="https://github.com/haxtag/2d-game" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              <a class="repository-link" href="https://github.com/haxtag/2d-game" target="_blank" rel="noopener noreferrer" aria-label="View repository (opens in a new tab)">
+                View repository
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 3h7v7"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-card-top">
-              <span class="project-type">TEAM WEB PROJECT</span>
+            <button class="project-card-open" type="button" aria-label="View details for Immersitrip" aria-haspopup="dialog"></button>
+            <div class="project-details">
+              <div class="project-summary">
+                <span class="project-card-top"><span class="project-type">TEAM WEB PROJECT</span></span>
+                <h3 class="project-title">Immersitrip</h3>
+                <span class="project-description">A website for a fictional virtual reality travel agency, featuring trip offers and bookings.</span>
+                <span class="project-tags" role="list" aria-label="Technologies used">
+                  <span role="listitem">HTML</span><span role="listitem">CSS</span>
+                </span>
+              </div>
+              <div class="project-expanded">
+                <p>This team-built website has separate travel, booking, and about pages. It presents virtual reality experiences and lets visitors explore the available offers.</p>
+              </div>
             </div>
-            <h3>Immersitrip</h3>
-            <p class="project-description">A website for a fictional virtual reality travel agency, featuring trip offers and bookings.</p>
-            <ul class="project-tags" aria-label="Technologies used">
-              <li>HTML</li><li>CSS</li>
-            </ul>
             <div class="project-links">
-              <a href="https://github.com/haxtag/travel-agency-website" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              <a class="repository-link" href="https://github.com/haxtag/travel-agency-website" target="_blank" rel="noopener noreferrer" aria-label="View repository (opens in a new tab)">
+                View repository
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 3h7v7"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-card-top">
-              <span class="project-type">TEAM DESKTOP APPLICATION</span>
+            <button class="project-card-open" type="button" aria-label="View details for the Letterboxd-inspired app" aria-haspopup="dialog"></button>
+            <div class="project-details">
+              <div class="project-summary">
+                <span class="project-card-top"><span class="project-type">TEAM DESKTOP APPLICATION</span></span>
+                <h3 class="project-title">Letterboxd-inspired app</h3>
+                <span class="project-description">A Java desktop application developed in a team, inspired by Letterboxd’s features.</span>
+                <span class="project-tags" role="list" aria-label="Technologies used"><span role="listitem">Java</span>                </span>
+              </div>
+              <div class="project-expanded">
+                <p>The application brings together films, series, episodes, user accounts, lists, and reviews in a desktop interface.</p>
+              </div>
             </div>
-            <h3>Letterboxd-inspired app</h3>
-            <p class="project-description">A Java desktop application developed in a team, inspired by Letterboxd’s features.</p>
-            <ul class="project-tags" aria-label="Technologies used">
-              <li>Java</li>
-            </ul>
             <div class="project-links">
-              <a href="https://github.com/haxtag/letterboxd-type-java-app" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              <a class="repository-link" href="https://github.com/haxtag/letterboxd-type-java-app" target="_blank" rel="noopener noreferrer" aria-label="View repository (opens in a new tab)">
+                View repository
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 3h7v7"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-card-top">
-              <span class="project-type">2<sup>nd</sup> PLACE · GAME JAM</span>
+            <button class="project-card-open" type="button" aria-label="View details for EdgeOfClick" aria-haspopup="dialog"></button>
+            <div class="project-details">
+              <div class="project-summary">
+                <span class="project-card-top"><span class="project-type">2<sup>nd</sup> PLACE · GAME JAM</span></span>
+                <h3 class="project-title">EdgeOfClick</h3>
+                <span class="project-description">A game developed by a team in 30 hours at the Paris-Saclay Code Game Jam.</span>
+                <span class="project-tags" role="list" aria-label="Technologies used">
+                  <span role="listitem">Godot</span><span role="listitem">GDScript</span>
+                </span>
+              </div>
+              <div class="project-expanded">
+                <p>Built by a team in Godot with GDScript during the 30-hour Paris-Saclay Code Game Jam. The project was awarded second place.</p>
+              </div>
             </div>
-            <h3>EdgeOfClick</h3>
-            <p class="project-description">A game developed by a team in 30 hours at the Paris-Saclay Code Game Jam.</p>
-            <ul class="project-tags" aria-label="Technologies used">
-              <li>Godot</li><li>GDScript</li>
-            </ul>
             <div class="project-links">
-              <a href="https://github.com/haxtag/AgeOfClick" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              <a class="repository-link" href="https://github.com/haxtag/AgeOfClick" target="_blank" rel="noopener noreferrer" aria-label="View repository (opens in a new tab)">
+                View repository
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 3h7v7"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
             </div>
           </article>
         </div>
+        <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+          <div class="project-dialog-panel">
+            <button class="project-dialog-close" type="button" aria-label="Close project details">&times;</button>
+            <p class="project-type project-dialog-type"></p>
+            <h2 class="project-dialog-title" id="project-dialog-title"></h2>
+            <p class="project-description project-dialog-summary"></p>
+            <div class="project-tags project-dialog-tags" role="list" aria-label="Technologies used"></div>
+            <div class="project-expanded project-dialog-description">
+              <p></p>
+            </div>
+            <div class="project-links project-dialog-links"></div>
+          </div>
+        </dialog>
       </section>
 
       <section class="journey section container" id="parcours" aria-labelledby="journey-title">
